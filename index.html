@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Maheer's Modern Website</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#0f172a;
+            color:white;
+            line-height:1.6;
+        }
+
+        /* Navbar */
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:20px 8%;
+            background:rgba(255,255,255,0.05);
+            backdrop-filter:blur(10px);
+            position:sticky;
+            top:0;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+            color:#38bdf8;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:25px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#38bdf8;
+        }
+
+        /* Hero */
+        .hero{
+            min-height:90vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            text-align:center;
+            padding:40px 8%;
+            background:linear-gradient(135deg,#0f172a,#1e293b,#0ea5e9);
+        }
+
+        .hero-content{
+            max-width:700px;
+        }
+
+        .hero h1{
+            font-size:55px;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            font-size:20px;
+            color:#e2e8f0;
+            margin-bottom:30px;
+        }
+
+        .btn{
+            display:inline-block;
+            padding:14px 28px;
+            background:#38bdf8;
+            color:#0f172a;
+            text-decoration:none;
+            border-radius:50px;
+            font-weight:bold;
+            transition:0.3s;
+            margin:5px;
+        }
+
+        .btn:hover{
+            transform:translateY(-3px);
+            background:#0ea5e9;
+        }
+
+        .btn-outline{
+            background:transparent;
+            border:2px solid #38bdf8;
+            color:white;
+        }
+
+        /* Features */
+        .features{
+            padding:80px 8%;
+            text-align:center;
+        }
+
+        .features h2{
+            font-size:40px;
+            margin-bottom:50px;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:#1e293b;
+            padding:30px;
+            border-radius:20px;
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+            background:#334155;
+        }
+
+        .card h3{
+            color:#38bdf8;
+            margin-bottom:15px;
+        }
+
+        /* Footer */
+        footer{
+            text-align:center;
+            padding:30px;
+            background:#020617;
+            color:#94a3b8;
+        }
+
+        /* Mobile */
+        @media(max-width:768px){
+            .hero h1{
+                font-size:38px;
+            }
+
+            nav{
+                flex-direction:column;
+                gap:15px;
+            }
+
+            nav ul{
+                flex-wrap:wrap;
+                justify-content:center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Maheer</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Build Beautiful Websites with HTML</h1>
+            <p>
+                This is a modern responsive website made using only
+                HTML, CSS and JavaScript. Perfect for beginners and college projects.
+            </p>
+
+            <a href="#features" class="btn">Get Started</a>
+            <a href="#contact" class="btn btn-outline">Contact</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <h2>Awesome Features</h2>
+
+        <div class="cards">
+            <div class="card">
+                <h3>Fast</h3>
+                <p>Loads quickly and works smoothly on all devices.</p>
+            </div>
+
+            <div class="card">
+                <h3>Responsive</h3>
+                <p>Looks great on mobile, tablet and desktop screens.</p>
+            </div>
+
+            <div class="card">
+                <h3>Modern Design</h3>
+                <p>Beautiful colors, shadows and hover effects included.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="features" id="contact">
+        <h2>Contact Me</h2>
+        <p style="margin-bottom:20px;">Click the button to see JavaScript in action.</p>
+        <a href="#" class="btn" onclick="showMessage()">Say Hello</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        © 2026 Maheer's Website | Made with ❤️ using HTML, CSS & JavaScript
+    </footer>
+
+    <script>
+        function showMessage(){
+            alert("Hello Maheer! Your website is working perfectly 🚀");
+        }
+    </script>
+
+</body>
+</html>
